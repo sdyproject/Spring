@@ -1,0 +1,23 @@
+#tomcat port
+server:
+  port: 9018
+#jsp
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/book/
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+#mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dragon?serverTimezone=Asia/Seoul
+    username: dragon
+    password: 1234
+#mybatis
+mybatis:
+  type-aliases-package: book.dto,book.mapper  #*도 올수있음 data.*
+  mapper-locations:
+  - /mapper/**/*.xml  #mapper 안에 있는건 xml로 맞춘다 
